@@ -3,6 +3,8 @@
 MVP de uma ilha dinâmica multiplataforma construída com Tauri 2, Vue 3 e
 TypeScript.
 
+Criado por [Alex Lanção](https://alexlan.com.br).
+
 ## MVP atual
 
 - Janela transparente, sem moldura, sempre no topo e fora da barra de tarefas.
@@ -48,6 +50,17 @@ herdadas do VS Code instalado por Snap. Sem essa limpeza, o WebKitGTK pode
 carregar bibliotecas do Ubuntu Core e encerrar com um erro de `libpthread`.
 
 O frontend também pode ser visualizado isoladamente com `npm run dev`.
+
+## Licença
+
+O código original do Stache é disponibilizado sob a
+[Apache License 2.0](LICENSE). Você pode usar, modificar e redistribuir o
+projeto, inclusive comercialmente, desde que preserve a licença, os avisos de
+direitos autorais e o crédito descrito em [NOTICE](NOTICE). Arquivos modificados
+também devem indicar que foram alterados.
+
+O componente de terceiros `gnome-extension/hidetopbar@mathieu.bidon.ca/`
+permanece sob a GNU GPL v3; consulte o arquivo `COPYING.txt` desse diretório.
 
 Se o VS Code tiver sido instalado por Snap, o lançador detecta automaticamente
 a política AppArmor do terminal integrado e inicia o Tauri em uma unidade
