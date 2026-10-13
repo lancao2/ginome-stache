@@ -1,0 +1,11 @@
+{
+  "id": "status",
+  "name": "Status de servidores",
+  "version": "1.0.0",
+  "description": "Verifica se sites e APIs respondem e quanto demoram; avisa quando um cai ou volta.",
+  "main": ["python3", "main.py"],
+  "permissions": { "network": ["*"], "alerts": true },
+  "settings": [
+    { "key": "urls", "label": "Endereços", "default": "https://example.com", "hint": "Separados por vírgula" }
+  ]
+}

@@ -1,0 +1,13 @@
+[Unit]
+Description=Mantém a tela acesa enquanto a sessão está bloqueada (bloquear sem apagar a tela)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=simple
+ExecStart=/usr/lib/stache/lock-awake.sh
+Restart=on-failure
+RestartSec=2
+
+[Install]
+WantedBy=graphical-session.target

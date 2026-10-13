@@ -1,0 +1,10 @@
+{
+  "name": "Stache Reserved Space",
+  "description": "Reserves workspace space for the Stache dynamic island.",
+  "uuid": "stache-reserved-space@alexlan",
+  "shell-version": [
+    "50"
+  ],
+  "url": "https://github.com/alexlan/stache",
+  "settings-schema": "org.gnome.shell.extensions.stache"
+}

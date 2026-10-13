@@ -1,0 +1,8 @@
+{
+  "id": "docker",
+  "name": "Docker",
+  "version": "1.0.0",
+  "description": "Containers em execução e parados; avisa quando um container cai.",
+  "main": ["python3", "main.py"],
+  "permissions": { "exec": [["docker", "ps"]], "alerts": true }
+}

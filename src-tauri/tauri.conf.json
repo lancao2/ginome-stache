@@ -1,0 +1,88 @@
+{
+  "$schema": "https://schema.tauri.app/config/2",
+  "productName": "Dynamic Stache",
+  "version": "1.1.0",
+  "identifier": "com.alexlan.stache",
+  "build": {
+    "beforeDevCommand": "npm run dev",
+    "devUrl": "http://localhost:1420",
+    "beforeBuildCommand": "npm run build",
+    "frontendDist": "../dist"
+  },
+  "app": {
+    "windows": [
+      {
+        "label": "main",
+        "title": "Stache",
+        "width": 760,
+        "height": 30,
+        "minWidth": 760,
+        "minHeight": 24,
+        "maxWidth": 760,
+        "maxHeight": 460,
+        "decorations": false,
+        "transparent": true,
+        "alwaysOnTop": true,
+        "skipTaskbar": true,
+        "resizable": false,
+        "shadow": false,
+        "visible": false,
+        "center": false
+      }
+    ],
+    "security": {
+      "csp": null,
+      "assetProtocol": {
+        "enable": true,
+        "scope": [
+          "$APPDATA/clipboard-images/*"
+        ]
+      }
+    }
+  },
+  "bundle": {
+    "active": true,
+    "targets": [
+      "deb"
+    ],
+    "category": "Utility",
+    "publisher": "alexlan",
+    "shortDescription": "Ilha dinâmica para o GNOME",
+    "longDescription": "Stache: uma ilha dinâmica para o GNOME com mídia, tarefas, agenda, área de transferência, busca, WhatsApp, plugins e avisos de contexto.",
+    "icon": [
+      "icons/32x32.png",
+      "icons/128x128.png",
+      "icons/128x128@2x.png",
+      "icons/icon.icns",
+      "icons/icon.ico"
+    ],
+    "linux": {
+      "deb": {
+        "section": "utils",
+        "depends": [
+          "libwebkit2gtk-4.1-0",
+          "libgtk-3-0",
+          "libglib2.0-bin"
+        ],
+        "recommends": [
+          "bubblewrap",
+          "pipewire-bin",
+          "nodejs",
+          "gnome-shell-extension-prefs"
+        ],
+        "files": {
+          "/usr/lib/stache/sidecar/whatsapp": "../sidecar/whatsapp",
+          "/usr/share/gnome-shell/extensions/stache-reserved-space@alexlan": "../gnome-extension/stache-reserved-space@alexlan",
+          "/usr/share/gnome-shell/extensions/hidetopbar@mathieu.bidon.ca": "../gnome-extension/hidetopbar@mathieu.bidon.ca",
+          "/usr/lib/systemd/user/stache.service": "../packaging/stache.service",
+          "/usr/lib/systemd/user/stache-lock.service": "../packaging/stache-lock.service",
+          "/usr/lib/stache/lock-on-boot.sh": "../packaging/stache-lock-on-boot.sh",
+          "/usr/lib/systemd/user/stache-lock-awake.service": "../packaging/stache-lock-awake.service",
+          "/usr/lib/stache/lock-awake.sh": "../packaging/stache-lock-awake.sh"
+        },
+        "postInstallScript": "../packaging/postinst.sh",
+        "preRemoveScript": "../packaging/prerm.sh"
+      }
+    }
+  }
+}

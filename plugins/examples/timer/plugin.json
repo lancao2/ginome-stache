@@ -1,0 +1,11 @@
+{
+  "id": "timer",
+  "name": "Timer",
+  "version": "1.0.0",
+  "description": "Cronômetro regressivo (pomodoro) com aviso na cápsula ao terminar.",
+  "main": ["python3", "main.py"],
+  "permissions": { "alerts": true },
+  "settings": [
+    { "key": "minutes", "label": "Minutos", "default": "25" }
+  ]
+}

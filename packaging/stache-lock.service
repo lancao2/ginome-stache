@@ -1,0 +1,11 @@
+[Unit]
+Description=Bloqueia a sessão ao ligar o computador (tela de bloqueio do GNOME no boot)
+PartOf=graphical-session.target
+After=graphical-session.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/lib/stache/lock-on-boot.sh
+
+[Install]
+WantedBy=graphical-session.target

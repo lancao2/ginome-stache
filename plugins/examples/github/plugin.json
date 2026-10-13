@@ -1,0 +1,12 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "version": "1.0.0",
+  "description": "Estrelas, issues abertas e a última versão de um repositório; avisa quando sai uma versão nova.",
+  "main": ["python3", "main.py"],
+  "permissions": { "network": ["api.github.com"], "alerts": true, "storage": true },
+  "settings": [
+    { "key": "repo", "label": "Repositório", "default": "tauri-apps/tauri", "hint": "dono/nome" },
+    { "key": "token", "label": "Token (opcional)", "secret": true, "hint": "Aumenta o limite de consultas" }
+  ]
+}

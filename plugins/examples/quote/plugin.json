@@ -1,0 +1,11 @@
+{
+  "id": "quote",
+  "name": "Cotação",
+  "version": "1.0.0",
+  "description": "Dólar, euro e bitcoin em reais (AwesomeAPI), atualizados a cada minuto.",
+  "main": ["python3", "main.py"],
+  "permissions": { "network": ["economia.awesomeapi.com.br"] },
+  "settings": [
+    { "key": "pairs", "label": "Pares", "default": "USD-BRL,EUR-BRL,BTC-BRL", "hint": "Ex.: USD-BRL,EUR-BRL,BTC-BRL" }
+  ]
+}

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<schemalist>
+  <schema id="org.gnome.shell.extensions.stache" path="/org/gnome/shell/extensions/stache/">
+    <key name="clipboard-shortcut" type="as">
+      <default>["&lt;Super&gt;v"]</default>
+      <summary>Atalho da área de transferência do Stache</summary>
+      <description>Abre o histórico da área de transferência na ilha.</description>
+    </key>
+    <key name="search-shortcut" type="as">
+      <default>["&lt;Super&gt;space"]</default>
+      <summary>Atalho da busca do Stache</summary>
+      <description>Abre a busca de arquivos e pastas na ilha.</description>
+    </key>
+  </schema>
+</schemalist>
