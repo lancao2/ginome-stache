@@ -25,3 +25,38 @@ dist-ssr
 
 # Sidecar do WhatsApp
 sidecar/whatsapp/node_modules
+
+# Artefatos de build gerados (zip da extensão GNOME, pacotes)
+/build/
+*.deb
+*.rpm
+*.AppImage
+
+# Rust/Tauri (também coberto por src-tauri/.gitignore)
+src-tauri/target/
+src-tauri/gen/schemas/
+
+# Dependências
+**/node_modules/
+
+# Variáveis de ambiente e segredos
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Sessão/credenciais do WhatsApp (Baileys)
+auth/
+auth_info*/
+whatsapp-auth/
+
+# Python
+__pycache__/
+*.pyc
+.venv/
+
+# Cobertura e cache de ferramentas
+coverage/
+.vite/
+*.tsbuildinfo
